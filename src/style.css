@@ -1,0 +1,112 @@
+body {
+  font-family: "Oswald", sans-serif;
+}
+h1 {
+  color: #0c151c;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  color: #666464;
+  font-size: 16px;
+  font-weight: 300px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+li:first-letter {
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-app-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 8px solid #d9d9db;
+  box-shadow: black;
+  border-radius: 40px;
+}
+.country {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #4ac5c5;
+}
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+#temperature {
+  color: #0c151c;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  top: -34px;
+  font-size: 16px;
+}
+.weatherInfo li strong {
+  color: #4ac5c5;
+  font-weight: 400;
+}
+
+.form-control {
+  max-width: 300px;
+  margin: 0;
+  padding: 20;
+  border-color: gray;
+}
+
+button {
+  width: 100%;
+  margin: 5px;
+  padding: 2px 5px;
+  border-width: 1px;
+  display: inline-block;
+}
+
+#search-form {
+  margin-bottom: 30px;
+}
+
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 16px;
+  font-weight: 400;
+  color: #0c151c;
+}
+.temperature-max {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4ac5c5;
+}
+.temperature-min {
+  font-size: 15px;
+  font-weight: 400;
+  color: #666464;
+}
