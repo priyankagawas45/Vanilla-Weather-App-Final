@@ -2,6 +2,7 @@ body {
   font-family: "Oswald", sans-serif;
 }
 h1 {
+  padding-top: 20px;
   color: #0c151c;
   font-size: 34px;
   font-weight: 500;
@@ -29,16 +30,21 @@ a {
 }
 
 .wrapper {
+  padding-top: 50px;
   max-width: 600px;
   margin: 30px auto;
 }
 
 .weather-app-card {
-  padding: 20px;
+  padding: 30px;
   background: #ffffff;
   border: 8px solid #d9d9db;
   box-shadow: black;
   border-radius: 40px;
+}
+.city {
+  padding-top: 50px;
+  color: green;
 }
 .country {
   font-size: 20px;
@@ -72,22 +78,30 @@ a {
 }
 
 .form-control {
-  max-width: 300px;
+  max-width: 350px;
   margin: 0;
   padding: 20;
   border-color: gray;
 }
 
 button {
-  width: 100%;
-  margin: 5px;
-  padding: 2px 5px;
+  padding: 2px 6px;
   border-width: 1px;
-  display: inline-block;
+  border-style: outset;
+  border-image: initial;
+  background-color: #2fd2f2;
+  transition: all 200ms ease;
+  cursor: pointer;
+}
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #2fd2f2;
+  border: 1px solid #2fd2f2;
 }
 
 #search-form {
   margin-bottom: 30px;
+  display: inline;
 }
 
 .weather-forecast {

@@ -28,24 +28,42 @@
       <div class="wrapper">
         <div class="weather-app-card">
           <form id="search-form">
-            <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder="🔎 Enter a city"
-                  class="form-control"
-                  autocomplete="off"
-                  id="city-input"
-                />
+            <div class="row no-padding">
+                 <div class="col no-padding justify-content-center">
+                <form id="search-form">
+                  <div class="row no-padding">
+                    <div class="col no-padding justify-content-center">
+                      <input
+                        type="text"
+                        id="city-input"
+                        class="form-control"
+                        placeholder="🔎 Enter a city"
+                        autocomplete="off"
+                        required
+                      />
+                    </div>
+
+                    <div class="col-3">
+                      <input
+                        type="submit"
+                        value="Search"
+                        class="search-button btn btn-primary w-100"
+                      />
+                    </div>
+                  </div>
+                </form>
               </div>
-              <div class="col-3">
-                <button type="submit" value="Search" class="search-button">
-                  Search
-                </button>
-                <button class="location-button">current Location</button>
+
+              <div class="col-2 no-padding">
+                <div class="row no-padding">
+                  <div class="col no-padding">
+                    <button class="location-button btn btn-primary w-100">
+                     Location
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </form>
 
           <div class="overview">
             <h1 id="city"></h1>
@@ -90,7 +108,6 @@
         </div>
       </div>
     </div>
-
     <script src="src/index.js"></script>
   </body>
 </html>
