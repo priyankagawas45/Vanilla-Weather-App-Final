@@ -127,8 +127,28 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+//show current location
+function handlePosition(position) {
+  let myLatitude = position.coords.latitude;
+  let myLongitude = position.coords.longitude;
+  let apiKey = "ae183e1c92o08fb1071d0e97f254bdtd";
+  let unit = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${myLongitude}&lat=${myLatitude}&key=${apiKey}&units=${unit}`;
+  axios.get(`${apiUrl}`).then(displayWeatherCondition);
+}
+
+function setCurrentLocation() {
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+//end location
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Mannheim");
+//location buttton call
+let currentLocationSearch = document.querySelector("button.location-button");
+currentLocationSearch.addEventListener("click", setCurrentLocation);
+//location button call end
+
+search("Frankfurt");
 displayForecast();
