@@ -74,30 +74,42 @@ function getForecast(coordinates) {
 }
 
 function displayWeatherCondition(response) {
-  let cityElement = document.querySelector("#city");
-  let countryElement = document.querySelector("#country");
-  let temperatureElement = document.querySelector("#temperature");
-  let realFeelElement = document.querySelector("#real-feel");
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let nowElement = document.querySelector("#now");
-  let weatherIconElement = document.querySelector("#weather-icon");
-
   celsiusTemperature = response.data.temperature.current;
-
-  cityElement.innerHTML = response.data.city;
-  countryElement.innerHTML = response.data.country;
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.city;
+
+  let countryElement = document.querySelector("#country");
+  countryElement.innerHTML = response.data.country;
+
+  let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
-  realFeelElement.innerHTML = Math.round(response.data.temperature.feels_like);
-  humidityElement.innerHTML = response.data.temperature.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let feelsLike = Math.round(response.data.temperature.feels_like);
+  let feelsLikeElement = document.querySelector("#feelsLike");
+  feelsLikeElement.innerHTML = `Feels like: ${feelsLike}°C`;
+
+  let humidity = Math.round(response.data.temperature.humidity);
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = `Humidity: ${humidity}%`;
+
+  let wind = Math.round(response.data.wind.speed);
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = `Wind: ${wind} km/h`;
+
+  let nowElement = document.querySelector("#now");
   nowElement.innerHTML = formatDate(response.data.time * 1000);
-  weatherIconElement.setAttribute(
-    "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
-  );
+
+  let weatherIconElement = document.querySelector("#weather-icon");
+  //deleted code link
+  // weatherIconElement.setAttribute(
+  // "src",
+  // `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  //);
+
+  weatherIconElement.setAttribute("src", response.data.condition.icon_url);
   weatherIconElement.setAttribute("alt", response.data.condition.icon);
 
   getForecast(response.data.coordinates);
