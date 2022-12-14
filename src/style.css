@@ -15,7 +15,7 @@ ul {
 }
 li {
   list-style: none;
-  color: #666464;
+  color: black;
   font-size: 16px;
   font-weight: 300px;
   line-height: 20px;
@@ -36,21 +36,23 @@ a {
 }
 
 .weather-app-card {
+  background-image: url("../Images/backgroung_img1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 30px;
-  background: #ffffff;
   border: 8px solid #d9d9db;
   box-shadow: black;
   border-radius: 40px;
 }
 .city {
   padding-top: 50px;
-  color: green;
+  color: black;
 }
 .country {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 10px;
-  color: #4ac5c5;
+  color: blue;
 }
 .overview {
   margin-bottom: 20px;
