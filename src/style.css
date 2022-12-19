@@ -1,6 +1,12 @@
 body {
   font-family: "Oswald", sans-serif;
 }
+@media screen and (max-width: 600px) {
+  .wrapper,
+  .weather-app-card {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
 
 h1 {
   padding-top: 20px;
@@ -35,7 +41,7 @@ a {
 
 .wrapper {
   padding-top: 50px;
-  max-width: 500px;
+  max-width: 580px;
   margin: 30px auto;
 }
 
@@ -95,6 +101,8 @@ button {
   margin: auto;
   padding-left: 5px;
   padding-right: 5px;
+
+  border-color: white;
 
   border-style: outset;
   border-image: initial;
