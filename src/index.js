@@ -28,6 +28,49 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+function displayForecast(response) {
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        ` <div class="col-2">
+        <div class="weather-forecast-day">${formatDay(forecastDay.time)}</div>
+        <div class="weather-forecast-icon">
+            <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+                  forecastDay.condition.icon
+                }.png"
+                alt="Snow"
+                width="45"
+                />
+            </div>
+        <div class="weather-forecast-temperature">
+        <span class="temperature-max">${Math.round(
+          forecastDay.temperature.maximum
+        )}º</span>
+        <span class="temperature-min">${Math.round(
+          forecastDay.temperature.minimum
+        )}º</span>
+        </div>
+    </div>`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "ae183e1c92o08fb1071d0e97f254bdtd";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.temperature.current;
