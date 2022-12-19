@@ -9,6 +9,9 @@ h1 {
   line-height: 36px;
   margin-bottom: 0;
 }
+img {
+  max-width: 100%;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -39,6 +42,7 @@ a {
   background-image: url("../Images/backgroung_img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
   padding: 30px;
 
   border: 10px solid whitesmoke;
@@ -75,10 +79,6 @@ a {
   top: -34px;
   font-size: 16px;
 }
-.weatherInfo li strong {
-  color: #4ac5c5;
-  font-weight: 400;
-}
 
 .form-control {
   max-width: 320px;
@@ -95,28 +95,28 @@ button {
   cursor: pointer;
 }
 
-#search-form {
-  margin-bottom: 30px;
-  display: inline;
-}
-
 .weather-forecast {
   margin-top: 30px;
   text-align: center;
 }
 
 .weather-forecast-day {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #0c151c;
 }
 .temperature-max {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   color: #4ac5c5;
 }
 .temperature-min {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: #666464;
+}
+
+footer {
+  font-size: 18px;
+  text-align: center;
 }

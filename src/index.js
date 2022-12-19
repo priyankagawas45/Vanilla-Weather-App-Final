@@ -102,11 +102,9 @@ function displayWeatherCondition(response) {
   nowElement.innerHTML = formatDate(response.data.time * 1000);
 
   let weatherIconElement = document.querySelector("#weather-icon");
-  //deleted code link
-  // weatherIconElement.setAttribute(
-  // "src",
-  // `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
-  //);
+  /*deleted code link
+    weatherIconElement.setAttribute("src",
+   `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`);  */
 
   weatherIconElement.setAttribute("src", response.data.condition.icon_url);
   weatherIconElement.setAttribute("alt", response.data.condition.icon);
@@ -163,7 +161,6 @@ form.addEventListener("submit", handleSubmit);
 //location buttton call
 let currentLocationSearch = document.querySelector("button.location-button");
 currentLocationSearch.addEventListener("click", setCurrentLocation);
-//location button call end
 
 //fahrenheit and celcius call
 let celsiusTemperature = null;
