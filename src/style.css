@@ -31,7 +31,7 @@ a {
 
 .wrapper {
   padding-top: 50px;
-  max-width: 620px;
+  max-width: 650px;
   margin: 30px auto;
 }
 
@@ -41,9 +41,9 @@ a {
   background-size: cover;
   padding: 30px;
 
-  border: 8px solid #d9d9db;
-  box-shadow: white;
-  border-radius: 5px;
+  border: 10px solid whitesmoke;
+  box-shadow: black;
+  border-radius: 28px;
 }
 .city {
   padding-top: 50px;
@@ -60,13 +60,13 @@ a {
 }
 .weather-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 70px;
+  width: 70px;
 }
 
 #temperature {
   color: #0c151c;
-  font-size: 64px;
+  font-size: 70px;
   font-weight: 400;
   line-height: 1;
 }
@@ -81,7 +81,7 @@ a {
 }
 
 .form-control {
-  max-width: 350px;
+  max-width: 320px;
   margin: 0;
   padding: 20;
   border-color: gray;
@@ -93,11 +93,6 @@ button {
   background-color: #2fd2f2;
   transition: all 200ms ease;
   cursor: pointer;
-}
-button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  color: white;
-  border: 1px solid #2fd2f2;
 }
 
 #search-form {
