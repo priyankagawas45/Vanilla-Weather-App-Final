@@ -88,6 +88,10 @@ a {
 }
 
 button {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
   border-style: outset;
   border-image: initial;
   background-color: #2fd2f2;
