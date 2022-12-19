@@ -1,6 +1,7 @@
 body {
   font-family: "Oswald", sans-serif;
 }
+
 h1 {
   padding-top: 20px;
   color: #0c151c;
@@ -34,7 +35,7 @@ a {
 
 .wrapper {
   padding-top: 50px;
-  max-width: 650px;
+  max-width: 600px;
   margin: 30px auto;
 }
 
