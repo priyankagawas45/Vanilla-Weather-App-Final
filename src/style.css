@@ -1,10 +1,10 @@
 body {
   font-family: "Oswald", sans-serif;
 }
-@media screen and (max-width: 600px) {
+@media all and (max-width: 600px) {
   .wrapper,
   .weather-app-card {
-    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    width: 100%;
   }
 }
 
